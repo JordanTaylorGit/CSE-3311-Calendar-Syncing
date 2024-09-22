@@ -14,3 +14,6 @@ User review:
 RE:
 1. Api conflict: 50% * 30 hours = 1.5 hours
 2. Language conflict between programs: 75% * 20 hours = 15 hour
+
+Version 0.2
+Added Login, register, forgot password, and OTP verifcation backend
