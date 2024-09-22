@@ -1,10 +1,19 @@
 const express = require('express');
 const app = express();
 const PORT = 3000;
-const User = require('./models/user');
+const User = require('./models/userModel');
+const OTP = require('./routes/otpRoutes');
+const auth = require('./routes/authRoutes');
 const bcrypt = require('bcrypt');
 
 app.use(express.json());
+
+//call database function
+require('./config/db').connect()
+
+//define routes for OTP and auth requests
+app.use('/api/otp', OTP)
+app.use('/api/auth', auth)
 
 // Start the server
 app.listen(PORT, () => {
